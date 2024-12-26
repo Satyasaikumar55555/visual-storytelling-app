@@ -1,3 +1,5 @@
+torch  # or specify the appropriate version for your environment
 streamlit
 transformers
 Pillow
+
