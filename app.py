@@ -22,7 +22,7 @@ if uploaded_image is not None:
             inputs = processor(image, return_tensors="pt")
             out = model.generate(**inputs)
             caption = processor.decode(out[0], skip_special_tokens=True)
-        st.write(f"Caption: {caption}")
+        st.write(f"Caption: {caption}.init()")
 
         if st.button('Generate Story from Caption'):
             with st.spinner("Generating story..."):
