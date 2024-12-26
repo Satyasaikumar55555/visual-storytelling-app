@@ -26,7 +26,7 @@ if uploaded_image is not None:
 
         if st.button('Generate Story from Caption'):
             with st.spinner("Generating story..."):
-                genre_prompt = f"Write a {selected_genre.lower()} story based on the following description: {caption}"
+                genre_prompt = f"The {selected_genre.lower()} story based on the following description: {caption} \n"
                 input_ids = tokenizer_gpt2.encode(genre_prompt, return_tensors='pt', max_length=1024, truncation=True)
                 story = model_gpt2.generate(
                     input_ids,
